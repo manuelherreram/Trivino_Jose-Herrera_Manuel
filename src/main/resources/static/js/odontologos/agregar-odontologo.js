@@ -9,10 +9,9 @@ window.addEventListener('load', function () {
 
         //creamos un JSON que tendrá los datos del nuevo odontologo
         const formData = {
-            apellido: document.querySelector('#apellido').value,
             nombre: document.querySelector('#nombre').value,
-            matricula: document.querySelector('#matricula').value,
-
+            apellido: document.querySelector('#apellido').value,
+            matricula: document.querySelector('#numeroMatricula').value,
         };
         //invocamos utilizando la función fetch la API odontologos con el método POST que guardará
         //el odontologo que enviaremos en formato JSON
@@ -55,9 +54,9 @@ window.addEventListener('load', function () {
 
 
     function resetUploadForm() {
-        document.querySelector('#apellido').value = "";
         document.querySelector('#nombre').value = "";
-        document.querySelector('#matricula').value = "";
+        document.querySelector('#apellido').value = "";
+        document.querySelector('#numeroMatricula').value = "";
 
     }
 
