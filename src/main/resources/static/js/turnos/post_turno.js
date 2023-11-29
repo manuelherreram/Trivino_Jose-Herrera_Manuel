@@ -7,14 +7,14 @@ window.addEventListener('load', function () {
     //Ante un submit del formulario se ejecutará la siguiente funcion
     formulario.addEventListener('submit', function (event) {
 
-       //creamos un JSON que tendrá los datos del nuevo turno
+        //creamos un JSON que tendrá los datos del nuevo turno
         const formData = {
             odontologo: {
                 id: document.querySelector('#odontologo').value,
             },
             paciente: {
-                 id: document.querySelector('#paciente').value,
-                 },
+                id: document.querySelector('#paciente').value,
+            },
             fecha: document.querySelector('#fecha').value,
 
         };
@@ -33,41 +33,42 @@ window.addEventListener('load', function () {
         fetch(url, settings)
             .then(response => response.json())
             .then(data => {
-                 //Si no hay ningun error se muestra un mensaje diciendo que el turno
-                 //se agrego bien
-                 let successAlert = '<div class="alert alert-success alert-dismissible">' +
-                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                     '<strong></strong> Turno success </div>'
+                //Si no hay ningun error se muestra un mensaje diciendo que el turno
+                //se agrego bien
+                let successAlert = '<div class="alert alert-success alert-dismissible">' +
+                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                    '<strong></strong> Turno success </div>'
 
-                 document.querySelector('#response').innerHTML = successAlert;
-                 document.querySelector('#response').style.display = "block";
-                 resetUploadForm();
+                document.querySelector('#response').innerHTML = successAlert;
+                document.querySelector('#response').style.display = "block";
+                resetUploadForm();
 
             })
             .catch(error => {
-                    //Si hay algun error se muestra un mensaje diciendo que el turno
-                    //no se pudo guardar y se intente nuevamente
-                    let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
-                                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                                     '<strong> Error intente nuevamente</strong> </div>'
+                //Si hay algun error se muestra un mensaje diciendo que el turno
+                //no se pudo guardar y se intente nuevamente
+                let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
+                    '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                    '<strong> Error intente nuevamente</strong> </div>'
 
-                      document.querySelector('#response').innerHTML = errorAlert;
-                      document.querySelector('#response').style.display = "block";
-                     //se dejan todos los campos vacíos por si se quiere ingresar otro turno
-                     resetUploadForm();})
+                document.querySelector('#response').innerHTML = errorAlert;
+                document.querySelector('#response').style.display = "block";
+                //se dejan todos los campos vacíos por si se quiere ingresar otro turno
+                resetUploadForm();
+            })
     });
 
 
-    function resetUploadForm(){
+    function resetUploadForm() {
         document.querySelector('#odontologo').value = "";
         document.querySelector('#paciente').value = "";
         document.querySelector('#fecha').value = "";
 
     }
 
-    (function(){
+    (function () {
         let pathname = window.location.pathname;
-        if(pathname === "/"){
+        if (pathname === "/") {
             document.querySelector(".nav .nav-item a:first").addClass("active");
         } else if (pathname == "/post_turno.html") {
             document.querySelector(".nav .nav-item a:last").addClass("active");

@@ -13,10 +13,10 @@ window.addEventListener('load', function () {
         const formData = {
             id: document.querySelector('#turno_id').value,
             odontologo: {
-                id:document.querySelector('#odontologo').value,
+                id: document.querySelector('#odontologo').value,
             },
             paciente: {
-                id:document.querySelector('#paciente').value,
+                id: document.querySelector('#paciente').value,
             },
             fecha: document.querySelector('#fecha').value,
 
@@ -32,31 +32,31 @@ window.addEventListener('load', function () {
             },
             body: JSON.stringify(formData)
         }
-          fetch(url,settings)
-          .then(response => response.json())
+        fetch(url, settings)
+            .then(response => response.json())
 
     })
- })
+})
 
-    //Es la funcion que se invoca cuando se hace click sobre el id de un turno del listado
-    //se encarga de llenar el formulario con los datos del turno
-    //que se desea modificar
-    function findBy(id) {
-          const url = '/turnos'+"/"+id;
-          const settings = {
-              method: 'GET'
-          }
-          fetch(url,settings)
-          .then(response => response.json())
-          .then(data => {
-              let turno = data;
-              document.querySelector('#turno_id').value = turno.id;
-              document.querySelector('#odontologo').value = turno.odontologo.id;
-              document.querySelector('#paciente').value = turno.paciente.id;
-              document.querySelector('#fecha').value = turno.fecha;
-              //el formulario por default esta oculto y al editar se habilita
-              document.querySelector('#div_turno_updating').style.display = "block";
-          }).catch(error => {
-              alert("Error: " + error);
-          })
-      }
+//Es la funcion que se invoca cuando se hace click sobre el id de un turno del listado
+//se encarga de llenar el formulario con los datos del turno
+//que se desea modificar
+function findBy(id) {
+    const url = '/turnos' + "/" + id;
+    const settings = {
+        method: 'GET'
+    }
+    fetch(url, settings)
+        .then(response => response.json())
+        .then(data => {
+            let turno = data;
+            document.querySelector('#turno_id').value = turno.id;
+            document.querySelector('#odontologo').value = turno.odontologo.id;
+            document.querySelector('#paciente').value = turno.paciente.id;
+            document.querySelector('#fecha').value = turno.fecha;
+            //el formulario por default esta oculto y al editar se habilita
+            document.querySelector('#div_turno_updating').style.display = "block";
+        }).catch(error => {
+        alert("Error: " + error);
+    })
+}

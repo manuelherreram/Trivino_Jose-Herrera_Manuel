@@ -3,51 +3,51 @@
 <head>
     <title>Agregar pacientes</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/pacientes/post_paciente.js"></script>
+    <script src="js/pacientes/post_paciente.js" type="text/javascript"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-center">
     <a class="navbar-brand" href="index.html">Inicio</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOdontologos" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" id="navbarDropdownOdontologos" role="button">
                     Gestión de Odontólogos
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
                     <a class="dropdown-item" href="get_all_odontologos.html">Listar odontólogos</a>
                     <a class="dropdown-item" href="post_odontologo.html">Agregar odontólogo</a>
 
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPacientes" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" id="navbarDropdownPacientes" role="button">
                     Gestión de Pacientes
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
                     <a class="dropdown-item" href="get_all_pacientes.html">Listar pacientes</a>
                     <a class="dropdown-item" href="post_paciente.html">Agregar paciente</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTurnos" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" id="navbarDropdownTurnos" role="button">
                     Gestión de Turnos
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
                     <a class="dropdown-item" href="get_all_turnos.html">Listar turnos</a>
                     <a class="dropdown-item" href="post_turno.html">Agregar turno</a>
                 </div>
@@ -66,52 +66,52 @@
                         <h3 class="">Agregar Paciente</h3>
                         <div class="form-group">
                             <label class="control-label" for="nombre">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre"
+                            <input class="form-control" id="nombre" name="nombre"
                                    placeholder="Ingrese el nombre"
-                                   name="nombre" required>
+                                   required type="text">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="apellido">Apellido:</label>
-                            <input type="text" class="form-control" id="apellido"
+                            <input class="form-control" id="apellido" name="apellido"
                                    placeholder="Ingrese el apellido"
-                                   name="apellido" required>
+                                   required type="text">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="email">Email:</label>
-                            <input type="email" class="form-control" id="email"
+                            <input class="form-control" id="email" name="email"
                                    placeholder="Ingrese el email"
-                                   name="email" required>
+                                   required type="email">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="dni">DNI: <small>Sin puntos</small></label>
-                            <input type="number" class="form-control" id="dni"
+                            <input class="form-control" id="dni" name="dni"
                                    placeholder="Ingrese el DNI"
-                                   name="dni" required>
+                                   required type="number">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="fechaIngreso">Fecha de ingreso:</label>
-                            <input type="date" class="form-control" id="fechaIngreso"
+                            <input class="form-control" id="fechaIngreso" name="fechaIngreso"
                                    placeholder="Ingrese la fecha de ingreso"
-                                   name="fechaIngreso" required>
+                                   required type="date">
                         </div>
                     </div>
                     <div class="" id="tableDomicilio">
                         <h3 class="">Agregar domicilio</h3>
                         <div class="form-group">
                             <label class="control-label" for="calle">Calle:</label>
-                            <input type="text" class="form-control" id="calle"
+                            <input class="form-control" id="calle" name="calle"
                                    placeholder="Ingrese la calle"
-                                   name="calle" required>
+                                   required type="text">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="numero">Número:</label>
-                            <input type="number" class="form-control" id="numero"
+                            <input class="form-control" id="numero" name="numero"
                                    placeholder="Ingrese el número"
-                                   name="numero" required>
+                                   required type="number">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-danger"
-                            id="btn-add-new-paciente">Guardar
+                    <button class="btn btn-danger" id="btn-add-new-paciente"
+                            type="submit">Guardar
                     </button>
 
                 </div>
