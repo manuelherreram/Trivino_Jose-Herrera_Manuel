@@ -17,7 +17,7 @@ public class DomicilioEntradaDto {
 
     private int numero;
 
-    public DomicilioEntradaDto() {
+    public DomicilioEntradaDto(String calle, int i, String localidad, String provincia) {
     }
 
     public DomicilioEntradaDto(String calle, int numero) {

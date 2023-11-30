@@ -1,11 +1,8 @@
 package com.backend.clinicaodontologica.dto.entrada.turno;
 
-import com.backend.clinicaodontologica.entity.Odontologo;
-import com.backend.clinicaodontologica.entity.Paciente;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -16,7 +13,7 @@ public class TurnoEntradaDto {
     @NotNull(message = "el pacienteId no puede ser nulo")
     private Long pacienteId;
 
-    public TurnoEntradaDto() {
+    public TurnoEntradaDto(int id, Long odontologoSalidaDtoId, LocalDateTime localDateTime) {
     }
 
 
