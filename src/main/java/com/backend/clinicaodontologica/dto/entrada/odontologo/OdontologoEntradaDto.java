@@ -1,40 +1,44 @@
 package com.backend.clinicaodontologica.dto.entrada.odontologo;
 
-import javax.validation.constraints.Digits;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OdontologoEntradaDto {
-    @NotNull(message = "La matrícula del odontólogo no puede ser nulo")
-    @Digits(integer = 10, fraction = 0, message = "El número de matrícula debe tener 10 o menos caracteres")
-    private Integer numeroMatricula;
 
-    @NotNull(message = "El nombre del odontólogo no puede ser nulo")
+    @NotNull(message = "La matricula del odontólogo no puede ser nula")
+    @NotBlank(message = "Debe especificarse la matricula del odontólogo")
+    @Size(min = 10, message = "El campo debe tener mínimo 10 caracteres")
+    private String matricula;
+
+    @Size(max = 50, message = "El nombre del odontólogo debe tener hasta 50 caracteres")
+    @NotNull(message = "El nombre de odontólogo no puede ser nulo")
     @NotBlank(message = "Debe especificarse el nombre del odontólogo")
-    @Size(max = 50, message = "El nombre debe tener hasta 50 caracteres")
     private String nombre;
 
-    @Size(max = 50, message = "El apellido debe tener hasta 50 caracteres")
-    @NotNull(message = "El apellido del odontólogo no puede ser nulo")
+    @Size(max = 50, message = "El apellido de odontólogo debe tener hasta 50 caracteres")
+    @NotNull(message = "El apellido de odontólogo no puede ser nulo")
     @NotBlank(message = "Debe especificarse el apellido del odontólogo")
     private String apellido;
 
     public OdontologoEntradaDto() {
     }
 
-    public OdontologoEntradaDto(Integer numeroMatricula, String nombre, String apellido) {
-        this.numeroMatricula = numeroMatricula;
+    public OdontologoEntradaDto(String matricula, String nombre, String apellido) {
+        this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
-    public Integer getNumeroMatricula() {
-        return numeroMatricula;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setNumeroMatricula(Integer numeroMatricula) {
-        this.numeroMatricula = numeroMatricula;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getNombre() {

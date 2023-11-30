@@ -4,15 +4,18 @@ import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+
 public class DomicilioEntradaDto {
+
+
     @NotNull(message = "El campo calle no puede ser nulo")
     @NotBlank(message = "El campo calle no puede estar en blanco")
     private String calle;
 
     @NotNull(message = "El campo numero no puede ser nulo")
     @Digits(integer = 8, fraction = 0, message = "El número debe tener como máximo 8 dígitos")
-    //@Pattern(regexp = "\\d{1,8}", message = "El número debe tener como máximo 8 dígitos")
-    private Integer numero;
+
+    private int numero;
 
     @NotNull(message = "El campo localidad no puede ser nulo")
     @NotBlank(message = "El campo localidad no puede estar en blanco")
@@ -64,5 +67,3 @@ public class DomicilioEntradaDto {
         this.provincia = provincia;
     }
 }
-
-

@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "4c001b11-ed1c-4184-91b9-90c18a2540f4",
+		"name": "ClinicaOdontologica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21465915"
+	},
+	"item": [
+		{
+			"name": "RegistrarOdontologo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Manuel\",\r\n  \"apellido\": \"Herrera\",\r\n  \"matricula\": \"0123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologos/registrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologos",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarOdontologoId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarOdontologos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologos/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologos",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarOdontologo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"matricula\": \"0123456789\",\r\n        \"nombre\": \"Jose\",\r\n        \"apellido\": \"Trivino\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologos/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologos",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BorrarOdontologo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"matricula\": \"0123456789\",\r\n        \"nombre\": \"Jose\",\r\n        \"apellido\": \"Trivino\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/odontologos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"odontologos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegistrarPaciente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Manuel\",\r\n  \"apellido\": \"Herrera\",\r\n  \"dni\": 123456,\r\n  \"fechaIngreso\": \"2023-12-23\",\r\n  \"domicilioEntradaDto\":{\r\n    \"calle\": \"sin nombre\",\r\n    \"numero\":123,\r\n    \"localidad\":\"Valparaiso\",\r\n     \"provincia\": \"Valparaiso\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes/registrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPacienteId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Jose\",\r\n  \"apellido\": \"Trivino\",\r\n  \"dni\": 789123,\r\n  \"fechaIngreso\": \"2023-12-25\",\r\n  \"domicilioEntradaDto\":{\r\n    \"calle\": \"sin nombre\",\r\n    \"numero\":123,\r\n    \"localidad\":\"Con Con\",\r\n     \"provincia\": \"Con Con\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarPacientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\":\"Jose\",\r\n  \"apellido\": \"Trivino\",\r\n  \"dni\": 789123,\r\n  \"fechaIngreso\": \"2023-12-25\",\r\n  \"domicilioEntradaDto\":{\r\n    \"calle\": \"sin nombre\",\r\n    \"numero\":123,\r\n    \"localidad\":\"Con Con\",\r\n     \"provincia\": \"Con Con\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarPaciente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n\"nombre\":\"Jose\",\r\n  \"apellido\": \"Trivino\",\r\n  \"dni\": 789123,\r\n  \"fechaIngreso\": \"2023-12-25\",\r\n  \"domicilioEntradaDto\":{\r\n    \"calle\": \"Con nombre\",\r\n    \"numero\":123,\r\n    \"localidad\":\"Con Con\",\r\n     \"provincia\": \"Con Con\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarPaciente",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n\"nombre\":\"Jose\",\r\n  \"apellido\": \"Trivino\",\r\n  \"dni\": 789123,\r\n  \"fechaIngreso\": \"2023-12-25\",\r\n  \"domicilioEntradaDto\":{\r\n    \"calle\": \"Con nombre\",\r\n    \"numero\":123,\r\n    \"localidad\":\"Con Con\",\r\n     \"provincia\": \"Con Con\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pacientes/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pacientes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

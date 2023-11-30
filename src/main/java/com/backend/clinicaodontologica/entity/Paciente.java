@@ -9,21 +9,19 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(length = 40)
+    @Column(length = 50)
     private String nombre;
-    @Column(length = 40)
+    @Column(length = 50)
     private String apellido;
-    @Column(length = 40)
+    @Column(length = 50)
     private int dni;
-
     private LocalDate fechaIngreso;
+
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
 
-
     public Paciente() {
-
     }
 
     public Paciente(String nombre, String apellido, int dni, LocalDate fechaIngreso, Domicilio domicilio) {
@@ -58,7 +56,6 @@ public class Paciente {
         this.apellido = apellido;
     }
 
-
     public int getDni() {
         return dni;
     }
@@ -83,8 +80,5 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
-    @Override
-    public String toString() {
-        return "Id: " + id + " - Nombre: " + nombre + " - Apellido: " + apellido + " - DNI: " + dni + " - Fechas de ingreso: " + fechaIngreso;
-    }
+
 }

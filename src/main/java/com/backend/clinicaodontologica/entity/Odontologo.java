@@ -2,26 +2,28 @@ package com.backend.clinicaodontologica.entity;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "ODONTOLOGOS")
 public class Odontologo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(length = 10)
-    private Integer numeroMatricula;
-    @Column(length = 40)
+
+    @Column(length = 50)
+    private String matricula;
+    @Column(length = 50)
     private String nombre;
-    @Column(length = 40)
+    @Column(length = 50)
     private String apellido;
 
-    public Odontologo(Integer numeroMatricula, String nombre, String apellido) {
-        this.numeroMatricula = numeroMatricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
+    public Odontologo() {
     }
 
-    public Odontologo() {
+    public Odontologo(String matricula, String nombre, String apellido) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
     }
 
     public Long getId() {
@@ -32,12 +34,12 @@ public class Odontologo {
         this.id = id;
     }
 
-    public Integer getNumeroMatricula() {
-        return numeroMatricula;
+    public String getMatricula() {
+        return matricula;
     }
 
-    public void setNumeroMatricula(Integer numeroMatricula) {
-        this.numeroMatricula = numeroMatricula;
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 
     public String getNombre() {
@@ -56,11 +58,5 @@ public class Odontologo {
         this.apellido = apellido;
     }
 
-    @Override
-    public String toString() {
-        return "id=" + id +
-                ", numeroMatricula=" + numeroMatricula +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido;
-    }
+
 }

@@ -1,7 +1,6 @@
 package com.backend.clinicaodontologica.dto.salida.paciente;
 
 public class DomicilioSalidaDto {
-    //como es un dato de salida, de datos, es posible incluir menos campos
     private int id;
     private String calle;
     private int numero;

@@ -11,11 +11,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestControllerAdvice
-public class GlobalexceptionHandler {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler({ResourceNotFoundException.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Map<String, String> manejarResourceNotFound(ResourceNotFoundException exception) {
+    public Map<String, String> manejarResourceNotFound(ResourceNotFoundException exception){
         Map<String, String> mensaje = new HashMap<>();
         mensaje.put("mensaje", "Recurso no encontrado: " + exception.getMessage());
         return mensaje;
@@ -31,6 +31,24 @@ public class GlobalexceptionHandler {
             String errorMessage = error.getDefaultMessage();
             exceptionMessage.put(fieldName, errorMessage);
         });
+
         return exceptionMessage;
     }
+
+    @ExceptionHandler({BadRequestException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public Map<String, String> badRequestException(BadRequestException exception){
+        Map<String, String> mensaje = new HashMap<>();
+        mensaje.put("mensaje", exception.getMessage());
+        return mensaje;
+    }
+
+
+
+
+
+
+
+
+
 }

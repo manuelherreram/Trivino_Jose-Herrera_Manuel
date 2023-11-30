@@ -3,13 +3,12 @@ package com.backend.clinicaodontologica.dto.salida.paciente;
 import java.time.LocalDate;
 
 public class PacienteSalidaDto {
-
     private int id;
     private String nombre;
     private String apellido;
     private int dni;
     private LocalDate fechaIngreso;
-    private DomicilioSalidaDto domicilioSalidaDto; // aca usará el elemento del domicilioDTO
+    private DomicilioSalidaDto domicilioSalidaDto;
 
     public PacienteSalidaDto() {
     }
@@ -70,6 +69,4 @@ public class PacienteSalidaDto {
     public void setDomicilioSalidaDto(DomicilioSalidaDto domicilioSalidaDto) {
         this.domicilioSalidaDto = domicilioSalidaDto;
     }
-
-
 }

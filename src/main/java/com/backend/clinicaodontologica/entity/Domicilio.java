@@ -2,22 +2,23 @@ package com.backend.clinicaodontologica.entity;
 
 import javax.persistence.*;
 
-
 @Entity
 @Table(name = "DOMICILIOS")
 public class Domicilio {
 
+    //json -> dto Controlador dto -> servicio dto -> entidad -> repository (dao) -> entidad a BD -> repositoy -> servicio entidad a dto -> controlador -> dto @ResposeBody (dentro de @RestController) -> json
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(length = 40)
+    @Column(length = 50)
     private String calle;
-    @Column(length = 7)
+
+    @Column(length = 8)
     private int numero;
-    @Column(length = 40)
+    @Column(length = 50)
     private String localidad;
-    @Column(length = 40)
+    @Column(length = 50)
     private String provincia;
 
     public Domicilio() {
@@ -70,10 +71,5 @@ public class Domicilio {
         this.provincia = provincia;
     }
 
-    @Override
-    public String toString() {
-        return "Id: " + id + " - Calle: " + calle + " - Numero: " + numero + " - Localidad: " + localidad + " - Provincia: " + provincia;
-    }
+
 }
-
-
