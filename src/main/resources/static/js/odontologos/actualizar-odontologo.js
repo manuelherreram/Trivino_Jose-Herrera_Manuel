@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
     const formulario = document.querySelector('#update_odontologo_form');
 
     formulario.addEventListener('submit', function (event) {
+        event.preventDefault();
         let odontologoId = document.querySelector('#odontologo_id').value;
 
         //creamos un JSON que tendrá los datos del odontologo
@@ -13,15 +14,15 @@ window.addEventListener('load', function () {
         //para poder identificarlo y modificarlo para no cargarlo como nuevo
         const formData = {
             id: document.querySelector('#odontologo_id').value,
-            apellido: document.querySelector('#apellido').value,
             nombre: document.querySelector('#nombre').value,
+            apellido: document.querySelector('#apellido').value,
             matricula: document.querySelector('#matricula').value,
 
         };
 
         //invocamos utilizando la función fetch la API odontologos con el método PUT que modificará
-        //el odontologoque enviaremos en formato JSON
-        const url = '/odontologos/';
+        //el odontologo que enviaremos en formato JSON
+        const url = '/odontologos/actualizar';
         const settings = {
             method: 'PUT',
             headers: {
@@ -48,8 +49,8 @@ function findBy(id) {
         .then(data => {
             let odontologo = data;
             document.querySelector('#odontologo_id').value = odontologo.id;
-            document.querySelector('#apellido').value = odontologo.apellido;
             document.querySelector('#nombre').value = odontologo.nombre;
+            document.querySelector('#apellido').value = odontologo.apellido;
             document.querySelector('#matricula').value = odontologo.matricula;
             //el formulario por default esta oculto y al editar se habilita
             document.querySelector('#div_odontologo_updating').style.display = "block";

@@ -21,8 +21,6 @@ public class ClinicaOdontologicaApplication {
 		logger.info("ClinicaOdontologica is now running...");
 	}
 
-
-
 	@Bean
 	public ModelMapper modelMapper(){
 		return new ModelMapper();

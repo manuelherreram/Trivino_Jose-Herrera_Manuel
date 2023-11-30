@@ -68,8 +68,8 @@
                 <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Apellido</th>
                     <th>Nombre</th>
+                    <th>Apellido</th>
                     <th>Email</th>
                     <th>DNI</th>
                     <th>Fecha de Ingreso</th>
@@ -94,12 +94,12 @@
                             <input class="form-control" id="paciente_id" readonly type="number">
                         </div>
                         <div class="form-group">
-                            <label>Apellido:</label>
-                            <input class="form-control" id="apellido" placeholder="apellido" required type="text">
-                        </div>
-                        <div class="form-group">
                             <label>Nombre:</label>
                             <input class="form-control" id="nombre" placeholder="nombre" required type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido:</label>
+                            <input class="form-control" id="apellido" placeholder="apellido" required type="text">
                         </div>
                         <div class="form-group">
                             <label>Email:</label>
@@ -138,21 +138,9 @@
                                    placeholder="número"
                                    required type="number">
                         </div>
-                        <div class="form-group">
-                            <label class="control-label" for="localidad">Localidad:</label>
-                            <input class="form-control" id="localidad" name="localidad"
-                                   placeholder="localidad"
-                                   required type="text">
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="provincia">Provincia:</label>
-                            <input class="form-control" id="provincia" name="provincia"
-                                   placeholder="Ingrese la provincia"
-                                   required type="text">
-                        </div>
                     </div>
                     <div style="width: 100%; display: flex; justify-content: space-evenly;">
-                        <button class="btn btn-primary" type="submit">Modificar</button>
+                        <button class="btn btn-primary" onclick="document.querySelector('#div_paciente_updating').style.display = 'none'" type="submit">Modificar</button>
                         <button class="btn btn-secondary" onclick="document.querySelector('#div_paciente_updating').style.display = 'none'"
                                 type="button">
                             Cancelar

@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 
         //con fetch invocamos a la API de turnos con el método GET
         //nos devolverá un JSON con una colección de turnos
-        const url = '/turnos';
+        const url = '/turnos/listar';
         const settings = {
             method: 'GET'
         }
@@ -51,17 +51,6 @@ window.addEventListener('load', function () {
                         '<td>' + deleteButton + '</td>';
 
                 }
-
-
             })
     })
-
-    (function () {
-        let pathname = window.location.pathname;
-        if (pathname == "/get_all_turnos.html") {
-            document.querySelector(".nav .nav-item a:last").addClass("active");
-        }
-    })
-
-
 })

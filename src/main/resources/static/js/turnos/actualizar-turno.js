@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
 
         //invocamos utilizando la función fetch la API turnos con el método PUT que modificará
         //el turno que enviaremos en formato JSON
-        const url = '/turnos/';
+        const url = '/turnos/actualizar';
         const settings = {
             method: 'PUT',
             headers: {

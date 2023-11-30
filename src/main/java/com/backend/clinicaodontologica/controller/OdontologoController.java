@@ -24,7 +24,7 @@ public class OdontologoController {
 
     //POST
     @PostMapping("/registrar")
-    public ResponseEntity<OdontologoSalidaDto> registrarPaciente(@RequestBody @Valid OdontologoEntradaDto odontologo) throws BadRequestException {
+    public ResponseEntity<OdontologoSalidaDto> registrarOdontologo(@RequestBody @Valid OdontologoEntradaDto odontologo) throws BadRequestException {
         return new ResponseEntity<>(odontologoService.registrarOdontologo(odontologo), HttpStatus.CREATED);
     }
 
@@ -41,13 +41,13 @@ public class OdontologoController {
 
     //PUT
     @PutMapping("/actualizar")
-    public OdontologoSalidaDto actualizarPaciente(@RequestBody OdontologoModificacionEntradaDto odontologo) throws Exception {
+    public OdontologoSalidaDto actualizarOdontologos(@RequestBody OdontologoModificacionEntradaDto odontologo) throws Exception {
         return odontologoService.actualizarOdontologo(odontologo);
     }
 
     //DELETE
     @DeleteMapping("/{id}")
-    public void EliminarPaciente(@PathVariable Long id) throws BadRequestException {
+    public void EliminarOdontologo(@PathVariable Long id) throws BadRequestException {
         odontologoService.eliminarOdontologo(id);
     }
 }

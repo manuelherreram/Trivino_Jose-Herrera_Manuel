@@ -61,8 +61,6 @@
     <div class="row">
         <div class="table table-dark table-striped" style="padding:20px;">
             <form id="add_new_paciente">
-                <div class="">
-                    <div class="" id="tableDataPaciente">
                         <h3 class="">Agregar Paciente</h3>
                         <div class="form-group">
                             <label class="control-label" for="nombre">Nombre:</label>
@@ -77,12 +75,6 @@
                                    required type="text">
                         </div>
                         <div class="form-group">
-                            <label class="control-label" for="email">Email:</label>
-                            <input class="form-control" id="email" name="email"
-                                   placeholder="Ingrese el email"
-                                   required type="email">
-                        </div>
-                        <div class="form-group">
                             <label class="control-label" for="dni">DNI: <small>Sin puntos</small></label>
                             <input class="form-control" id="dni" name="dni"
                                    placeholder="Ingrese el DNI"
@@ -91,11 +83,8 @@
                         <div class="form-group">
                             <label class="control-label" for="fechaIngreso">Fecha de ingreso:</label>
                             <input class="form-control" id="fechaIngreso" name="fechaIngreso"
-                                   placeholder="Ingrese la fecha de ingreso"
                                    required type="date">
                         </div>
-                    </div>
-                    <div class="" id="tableDomicilio">
                         <h3 class="">Agregar domicilio</h3>
                         <div class="form-group">
                             <label class="control-label" for="calle">Calle:</label>
@@ -109,12 +98,9 @@
                                    placeholder="Ingrese el número"
                                    required type="number">
                         </div>
-                    </div>
                     <button class="btn btn-danger" id="btn-add-new-paciente"
                             type="submit">Guardar
                     </button>
-
-                </div>
             </form>
             <div id="response" style="display:none; margin-top:10px">
             </div>

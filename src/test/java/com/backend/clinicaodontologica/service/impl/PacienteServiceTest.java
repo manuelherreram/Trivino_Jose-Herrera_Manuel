@@ -22,8 +22,8 @@ class PacienteServiceTest {
     @Test
     @Order(1)
     void deberiaRegistrarInPacientedeNombreJoseYRetornarElId(){
-        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("jose", "trivino",123456789, LocalDate.of(2023,12,26),
-                new DomicilioEntradaDto("calle", 1234, "localidad","Provincia"));
+        PacienteEntradaDto pacienteEntradaDto = new PacienteEntradaDto("jose", "trivino",12345678, LocalDate.of(2023,12,26),
+                new DomicilioEntradaDto("calle", 1234));
 
         PacienteSalidaDto pacienteSalidaDto = pacienteService.registrarPaciente(pacienteEntradaDto);
         assertNotNull(pacienteSalidaDto.getId());

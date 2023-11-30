@@ -13,7 +13,7 @@ public class Paciente {
     private String nombre;
     @Column(length = 50)
     private String apellido;
-    @Column(length = 50)
+    @Column(length = 8)
     private int dni;
     private LocalDate fechaIngreso;
 
