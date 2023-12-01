@@ -17,10 +17,7 @@ public class DomicilioEntradaDto {
 
     private int numero;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 11e2f69660611100f217cb49c6d30c79a1ba3045
     public DomicilioEntradaDto(String calle, int numero) {
         this.calle = calle;
         this.numero = numero;
