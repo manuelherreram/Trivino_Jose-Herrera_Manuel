@@ -17,8 +17,6 @@ public class DomicilioEntradaDto {
 
     private int numero;
 
-    public DomicilioEntradaDto(String calle, int i, String localidad, String provincia) {
-    }
 
     public DomicilioEntradaDto(String calle, int numero) {
         this.calle = calle;
