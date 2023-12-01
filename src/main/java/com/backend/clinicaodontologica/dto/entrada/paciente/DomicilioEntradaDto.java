@@ -17,9 +17,6 @@ public class DomicilioEntradaDto {
 
     private int numero;
 
-    public DomicilioEntradaDto(String calle, int i, String localidad, String provincia) {
-    }
-
     public DomicilioEntradaDto(String calle, int numero) {
         this.calle = calle;
         this.numero = numero;
@@ -39,5 +36,6 @@ public class DomicilioEntradaDto {
 
     public void setNumero(int numero) {
         this.numero = numero;
+
     }
 }
